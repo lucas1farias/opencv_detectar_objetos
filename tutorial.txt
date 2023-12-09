@@ -5,7 +5,17 @@ Vídeo de referência e referências
     . https://github.com/ultralytics/ultralytics
     . https://github.com/DAVIDNYARKO123/yolov8-silva/tree/main
 
+Baixar o repositório
+    . Usar git clone ou download zip do link
+    . Ao baixar, o projeto de fato virá dentro da pasta que recebe o nome do repositório
+    . 2 possíveis soluções (que eu tenha percebido)
+        (1) pegue o conteúdo da pasta do projeto e recorte na pasta principal (um nível antes) e remova a pasta aninhada, que agora estará vazia
+        (2) recorte a pasta do conteúdo do projeto (pasta aninhada) e jogue em um outro lugar fora da pasta principal
+        
 Instalar um ambiente virtual:
+    . Abra a pasta do projeto numa ide, e nela abra o terminal integrado 
+    . O terminal deve estar aberto na raiz do projeto
+    . Executar o comando abaixo p/ iniciar as instalações das dependências
     . python -m venv venv 
 
 Logar no ambiente virtual:

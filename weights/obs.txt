@@ -1,0 +1,4 @@
+
+
+O arquivo que existirá aqui, será baixado quando o algoritmo "object_detection.py" for executado
+Enquanto isso, essa pasta permenece somente com este aviso
