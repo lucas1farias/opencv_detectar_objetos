@@ -2,3 +2,4 @@
 
 venv/
 weights/yolov8n.pt
+ip.txt

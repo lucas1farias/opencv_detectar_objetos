@@ -1,61 +1,56 @@
 
 
-Vídeo de referência e referências
-    . https://www.youtube.com/watch?v=hg4oVgNq7Do
-    . https://github.com/ultralytics/ultralytics
-    . https://github.com/DAVIDNYARKO123/yolov8-silva/tree/main
+===== Vídeo de referência e referências =====
+. https://www.youtube.com/watch?v=hg4oVgNq7Do
+. https://github.com/ultralytics/ultralytics
+. https://github.com/DAVIDNYARKO123/yolov8-silva/tree/main
 
-Baixar o repositório
-    . Usar git clone ou download zip do link
-    . Ao baixar, o projeto de fato virá dentro da pasta que recebe o nome do repositório
-    . 2 possíveis soluções (que eu tenha percebido)
-        (1) pegue o conteúdo da pasta do projeto e recorte na pasta principal (um nível antes) e remova a pasta aninhada, que agora estará vazia
-        (2) recorte a pasta do conteúdo do projeto (pasta aninhada) e jogue em um outro lugar fora da pasta principal
+===== Baixar o repositório =====
+. Usar git clone ou download zip do link
+. Ao baixar, o projeto de fato virá dentro da pasta que recebe o nome do repositório
+. 2 possíveis soluções (que eu tenha percebido)
+    (1) pegue o conteúdo da pasta do projeto e recorte na pasta principal (um nível antes) e remova a pasta aninhada, que agora estará vazia
+    (2) recorte a pasta do conteúdo do projeto (pasta aninhada) e jogue em um outro lugar fora da pasta principal
         
-Instalar um ambiente virtual:
-    . Abra a pasta do projeto numa ide, e nela abra o terminal integrado 
-    . O terminal deve estar aberto na raiz do projeto
-    . Executar o comando abaixo p/ iniciar as instalações das dependências
-    . python -m venv venv 
+===== Instalar um ambiente virtual =====
+. Abra a pasta do projeto numa IDE, e nela abra o terminal integrado 
+. O terminal deve estar aberto na raiz do projeto
+. Executar o comando abaixo p/ iniciar as instalações das dependências
+. (OBS) O comando abaixo pode funcionar ou não dependendo das configurações do seu interpretador python
+. (OBS) Se não funcionar, tente "python3 -m venv venv", senão, procure um tutorial de como instalar ambiente virtual
+. python -m venv venv 
+    
+===== Logar no ambiente virtual =====
+. venv\scripts\activate
 
-Logar no ambiente virtual:
-    . venv\scripts\activate
+===== Instalação de dependências =====
+. O ambiente virtual deve estar ativado
+. As bibliotecas instaladas são muito grandes, então a instalação levará algum tempo
+. pip install -r libs.txt
+. pip install ultralytics
 
-Dependência (com ambiente virtual ativado) (biblioteca grande, instalação demorada)
-    . pip install ultralytics
+===== Pasta: weights =====
+. Pasta programada no algoritmo p/ receber o arquivo de "weights" do YOLOv8
+. Ao executar o algoritmo "object_detection.py", o arquivo pertinente será baixado
 
-Salvando dependências (salva por padrão na raiz do projeto)
-    . pip freeze > libs.txt 
-
-Pasta (weights)
-    . Pasta programada no algoritmo p/ receber o arquivo de "weights" do YOLOv8
-    . Ao executar o algoritmo, o arquivo pertinente será baixado
-
-Arquivo: cls.txt
+===== Arquivo: cls.txt =====
     . Arquivo que contêm as classes treinadas pelo YOLOV8
     . O nome das classes podem ser alvos usados no algoritmo
 
-Arquivo: yolov8n.pt (em weights)
-    . Baixado automaticamente quando o algoritmo "object_detection.py" é executado
-    . Isso caso já não tenha sido baixado
+===== Arquivo: yolov8n.pt (dentro da pasta weights) =====
+. Baixado automaticamente quando o algoritmo "object_detection.py" é executado
+. Isso caso já não tenha sido baixado
 
-Habilitar conexão com a câmera
-    . Baixar o aplicativo "DroidCam" no seu celular
-    . Baixar o aplicativo desktop "DroidCam Client" no seu computador 
-        -> pesquisa: droidcam client (site dev47Apps)
-    . Iniciar o aplicativo do celular, que lhe fornecerá:
-        Wifi IP ou IP Cam Access
-    . Abrir o aplicativo desktop, e iniciar o servidor wifi
+===== Habilitar conexão com a câmera =====
+. Baixar o aplicativo "DroidCam" no seu celular
+. Baixar o aplicativo desktop "DroidCam Client" no seu computador 
+    -> pesquisa: droidcam client (site dev47Apps)
+. Abrir o aplicativo desktop, e iniciar o servidor wifi (opção 3 na tela)
+. Iniciar o aplicativo do celular, que lhe fornecerá:
+    -> Wifi IP ou IP Cam Access
+    -> O mais apropriado seria IP Cam Access (copiar o endereço de IP que têm "/video" no final)
+    -> Copiar somente o endereço de IP (pois o algoritmo já trata do resto)
 
-Atualmente, meu projeto está estruturado da seguinte maneira:
-> venv
-> weights
-. cls.txt
-. libs.txt
-. object_detection.py
-. tutorial.txt
-
-Minha pasta "venv" está gigantesca, com mais de 1GB de tamanho, talvez por eu ter instalado nela o "ultralytics"
-Além disso, dentro de "weights", eu tenho um arquivo "yolov8n.pt" que eu desejo omitir
-O motivo? ele será feito o download quando o arquivo "object_detection.py" for executado
-Se eu quiser omitir a pasta "venv" e o arquivo "yolov8n.pt" dentro de "weights", como eu deveria configurar meu ".gitignore" para isso de acordo com a estruturação do projeto que eu mostrei acima?
+===== Arquivo: object_detection.py =====
+. Va ao final do documento, onde encontrará a variável: ip_address
+. Cole o endereço de IP gerado pelo seu celular 

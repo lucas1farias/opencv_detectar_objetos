@@ -212,7 +212,7 @@ class Camera:
             exit(0)
 
 if __name__ == "__main__":
-    ip_address: str = "192.168.3.179:4747"
+    ip_address: str = ""
     classes_path: str = "cls.txt"
     read_mode: str = "r"
     tool: Tool = Tool()
