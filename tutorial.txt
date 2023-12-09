@@ -1,0 +1,51 @@
+
+
+Vídeo de referência e referências
+    . https://www.youtube.com/watch?v=hg4oVgNq7Do
+    . https://github.com/ultralytics/ultralytics
+    . https://github.com/DAVIDNYARKO123/yolov8-silva/tree/main
+
+Instalar um ambiente virtual:
+    . python -m venv venv 
+
+Logar no ambiente virtual:
+    . venv\scripts\activate
+
+Dependência (com ambiente virtual ativado) (biblioteca grande, instalação demorada)
+    . pip install ultralytics
+
+Salvando dependências (salva por padrão na raiz do projeto)
+    . pip freeze > libs.txt 
+
+Pasta (weights)
+    . Pasta programada no algoritmo p/ receber o arquivo de "weights" do YOLOv8
+    . Ao executar o algoritmo, o arquivo pertinente será baixado
+
+Arquivo: cls.txt
+    . Arquivo que contêm as classes treinadas pelo YOLOV8
+    . O nome das classes podem ser alvos usados no algoritmo
+
+Arquivo: yolov8n.pt (em weights)
+    . Baixado automaticamente quando o algoritmo "object_detection.py" é executado
+    . Isso caso já não tenha sido baixado
+
+Habilitar conexão com a câmera
+    . Baixar o aplicativo "DroidCam" no seu celular
+    . Baixar o aplicativo desktop "DroidCam Client" no seu computador 
+        -> pesquisa: droidcam client (site dev47Apps)
+    . Iniciar o aplicativo do celular, que lhe fornecerá:
+        Wifi IP ou IP Cam Access
+    . Abrir o aplicativo desktop, e iniciar o servidor wifi
+
+Atualmente, meu projeto está estruturado da seguinte maneira:
+> venv
+> weights
+. cls.txt
+. libs.txt
+. object_detection.py
+. tutorial.txt
+
+Minha pasta "venv" está gigantesca, com mais de 1GB de tamanho, talvez por eu ter instalado nela o "ultralytics"
+Além disso, dentro de "weights", eu tenho um arquivo "yolov8n.pt" que eu desejo omitir
+O motivo? ele será feito o download quando o arquivo "object_detection.py" for executado
+Se eu quiser omitir a pasta "venv" e o arquivo "yolov8n.pt" dentro de "weights", como eu deveria configurar meu ".gitignore" para isso de acordo com a estruturação do projeto que eu mostrei acima?
