@@ -26,24 +26,13 @@
 ===== Instalação de dependências =====
 . O ambiente virtual deve estar ativado
 . As bibliotecas instaladas são muito grandes, então a instalação levará algum tempo
+. Usa o comando abaixo (caso não funcione, tentar o segundo)
 . pip install -r libs.txt
 . pip install ultralytics
 
-===== Pasta: weights =====
-. Pasta programada no algoritmo p/ receber o arquivo de "weights" do YOLOv8
-. Ao executar o algoritmo "object_detection.py", o arquivo pertinente será baixado
-
-===== Arquivo: cls.txt =====
-    . Arquivo que contêm as classes treinadas pelo YOLOV8
-    . O nome das classes podem ser alvos usados no algoritmo
-
-===== Arquivo: yolov8n.pt (dentro da pasta weights) =====
-. Baixado automaticamente quando o algoritmo "object_detection.py" é executado
-. Isso caso já não tenha sido baixado
-
 ===== Habilitar conexão com a câmera =====
-. Baixar o aplicativo "DroidCam" no seu celular
-. Baixar o aplicativo desktop "DroidCam Client" no seu computador 
+. Baixar e instalar o aplicativo "DroidCam" no seu celular
+. Baixar e instalar o aplicativo desktop "DroidCam Client" no seu computador 
     -> pesquisa: droidcam client (site dev47Apps)
 . Abrir o aplicativo desktop, e iniciar o servidor wifi (opção 3 na tela)
 . Iniciar o aplicativo do celular, que lhe fornecerá:
@@ -52,5 +41,19 @@
     -> Copiar somente o endereço de IP (pois o algoritmo já trata do resto)
 
 ===== Arquivo: object_detection.py =====
-. Va ao final do documento, onde encontrará a variável: ip_address
-. Cole o endereço de IP gerado pelo seu celular 
+. Vá ao final do documento (ou use o CTRL + F na IDE), onde encontrará a variável: ip_address
+. Cole o endereço de IP gerado pelo seu celular no valor de "ip_address" 
+. OPCIONAL
+    -> a variável "monitor" contêm as dimensões da tela que o "opencv" abrirá a câmera
+    -> caso queira mudar o tamanho da sua tela, modifique estes valores
+
+===== Pasta: weights =====
+. Pasta programada no algoritmo p/ receber o arquivo de "weights" do YOLOv8
+. Ao executar o algoritmo "object_detection.py", o arquivo pertinente será baixado
+
+===== Arquivo: yolov8n.pt (dentro da pasta weights) =====
+. Baixado automaticamente quando o algoritmo "object_detection.py" é executado
+
+===== Arquivo: cls.txt =====
+. Arquivo que contêm as classes treinadas pelo YOLOV8
+. O nome das classes podem ser alvos usados no algoritmo
